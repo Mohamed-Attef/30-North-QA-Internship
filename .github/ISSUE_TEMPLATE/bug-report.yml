@@ -1,0 +1,108 @@
+
+name: Bug Report
+description: Report a reproducible software defect
+title: "[BUG]: "
+labels:
+  - bug
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Complete the fields below to document the defect clearly.
+
+  - type: input
+    id: summary
+    attributes:
+      label: Bug Summary
+      description: Briefly describe the issue.
+      placeholder: "e.g., Closed check total doubles after closing"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: severity
+    attributes:
+      label: Severity
+      options:
+        - Critical
+        - High
+        - Medium
+        - Low
+    validations:
+      required: true
+
+  - type: dropdown
+    id: priority
+    attributes:
+      label: Priority
+      options:
+        - P1 - Urgent
+        - P2 - High
+        - P3 - Medium
+        - P4 - Low
+    validations:
+      required: true
+
+  - type: input
+    id: environment
+    attributes:
+      label: Test Environment
+      description: App version, device, branch, and other relevant details.
+      placeholder: "e.g., Waiter App, Tablet, Figata Caesar"
+    validations:
+      required: true
+
+  - type: textarea
+    id: preconditions
+    attributes:
+      label: Preconditions
+      description: State the required setup before reproducing the bug.
+      placeholder: "e.g., A check containing two items is open."
+    validations:
+      required: false
+
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to Reproduce
+      description: List the steps in the exact order needed to reproduce the issue.
+      placeholder: |
+        1. Log in to the application.
+        2. Open a check.
+        3. Perform the action.
+        4. Observe the result.
+    validations:
+      required: true
+
+  - type: textarea
+    id: actual
+    attributes:
+      label: Actual Result
+      description: Describe what actually happened.
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected Result
+      description: Describe the correct behavior.
+    validations:
+      required: true
+
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Evidence
+      description: Add screenshots, screen recordings, logs, or relevant links.
+      placeholder: "Attach evidence or paste a link."
+    validations:
+      required: false
+
+  - type: textarea
+    id: notes
+    attributes:
+      label: Additional Notes
+      description: Include related issues, frequency, or other observations.
+    validations:
+      required: false
